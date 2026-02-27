@@ -499,6 +499,18 @@ ul {
         --section-padding: var(--section-padding-mobile);
     }
 
+    .hero {
+        height: 60vh;
+        /* Adjust height to better fit video aspect ratio */
+        min-height: 400px;
+    }
+
+    .hero-video {
+        object-fit: contain;
+        /* Ensure logo is never cropped */
+        background-color: #000;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
