@@ -113,7 +113,7 @@ ul {
     z-index: 0;
     /* Above the background color */
     transform: translate(-50%, -50%);
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .hero-content {
