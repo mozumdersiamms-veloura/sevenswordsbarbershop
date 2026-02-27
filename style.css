@@ -500,14 +500,14 @@ ul {
     }
 
     .hero {
-        height: 75vh;
-        /* Increased to prevent button overlap */
-        min-height: 450px;
+        height: 100svh;
+        /* Use SVH for better mobile full-screen */
+        min-height: 500px;
     }
 
     .hero-video {
-        object-fit: contain;
-        /* Ensure logo is never cropped */
+        object-fit: cover;
+        /* Vertical format optimization */
         background-color: #000;
     }
 
