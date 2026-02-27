@@ -90,15 +90,23 @@ ul {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
-    /* Move content to bottom */
+    align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-    padding-bottom: 50px;
-    /* Space from bottom */
     background-color: #000;
-    /* Handles bars for 'contain' video */
+}
+
+/* Subtle dark overlay for better contrast */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
 }
 
 .hero-video {
@@ -108,25 +116,53 @@ ul {
     width: 100%;
     height: 100%;
     z-index: 0;
-    /* Above the background color */
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-    /* Above the video */
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-logo {
+    max-width: 450px;
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    margin-bottom: 20px;
 }
 
 .hero-btns {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+.hero-btns .btn i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.hero-btns .btn:hover i {
+    transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Section Shared */
@@ -512,12 +548,12 @@ ul {
     }
 
     .hero-content {
-        padding-bottom: 30px;
-        /* Refined spacing */
+        padding-bottom: 20px;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .hero-logo {
+        max-width: 300px;
+        margin-bottom: 10px;
     }
 
     .hero-btns {
