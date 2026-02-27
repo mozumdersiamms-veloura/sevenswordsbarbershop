@@ -84,10 +84,6 @@ ul {
     background-color: var(--primary-color);
 }
 
-
-
-
-
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -355,8 +351,6 @@ ul {
     transform: translateY(0);
 }
 
-
-
 /* Location Section */
 .location {
     padding: var(--section-padding);
@@ -499,35 +493,64 @@ ul {
     opacity: 0.6;
 }
 
-/* Responsive Headers */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    :root {
+        --section-padding: var(--section-padding-mobile);
+    }
+
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
-    .nav-links,
-    .nav-btn {
-        display: none;
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 15px;
     }
 
-    .menu-toggle {
-        display: block;
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
     }
 
-    .section-title {
-        font-size: 2.5rem;
+    .about .section-title {
+        text-align: center;
     }
 
     .location-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .location-info {
+        padding: 30px 20px;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 40px;
+    }
+
+    .footer-logo img {
+        margin: 0 auto 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 30px 20px;
     }
 }
