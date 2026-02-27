@@ -500,9 +500,9 @@ ul {
     }
 
     .hero {
-        height: 60vh;
-        /* Adjust height to better fit video aspect ratio */
-        min-height: 400px;
+        height: 75vh;
+        /* Increased to prevent button overlap */
+        min-height: 450px;
     }
 
     .hero-video {
@@ -511,20 +511,28 @@ ul {
         background-color: #000;
     }
 
+    .hero-content {
+        padding-bottom: 30px;
+        /* Refined spacing */
+    }
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-btns {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
-        gap: 15px;
+        max-width: 280px;
+        /* Slightly narrower for better mobile fit */
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
         text-align: center;
+        padding: 12px 24px;
+        /* Slightly reduced padding for mobile */
     }
 
     .about-grid {
